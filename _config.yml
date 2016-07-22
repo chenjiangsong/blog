@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: Jesse's life
 subtitle:
-description:
-author: John Doe
-language:
+description: 陈江松的博客
+author: Jesse Chen
+language: zh-Hans
 timezone:
 
 # URL
@@ -63,9 +63,20 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repo: git@github.com:chenjiangsong/chenjiangsong.github.io.git
+  branch: master
+
+
+avatar: http://a1.qpic.cn/psb?/V12NDlRP3R6sAT/7iGZo7xknT45n6KVtZZubMcXeuRcSrcHjZU2TDB5HfU!/b/dHEBAAAAAAAA&bo=AAXAAwAFwAMFCSo!&rf=viewer_4
+
+duoshuo_shortname: jesseccchen
+
+search:
+  path: search.xml
+  field: post

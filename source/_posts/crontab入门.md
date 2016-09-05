@@ -4,17 +4,15 @@ date: 2016-07-25 15:13:03
 tags: linux
 ---
 
-## crontab是啥
+### crontab是啥
 >linux的定时任务
 
-## 什么情况下使用，在哪使用
+### 什么情况下使用，在哪使用
 >需要定时执行的程序，如天气预报的爬虫程序。
 
 >在SecurtCRT使用
 
 <!-- more -->
-## 使用介绍
-
 ### 简单的crontab命令：
 
 >crontab -help
@@ -41,7 +39,6 @@ tags: linux
 >正斜线（/）：可以用正斜线指定时间的间隔频率，例如“0-23/2”表示每两小时执行一次。同时正斜线可以和星号一起使用，例如*/10，如果用在minute字段，表示每十分钟执行一次。
 
 
-## 实际操作
 
 ### 已经写好的实例（天气预报爬虫）
 
@@ -61,14 +58,17 @@ tags: linux
 >将当前服务器的时间输入log.txt，每分钟执行一次
 
 
-## 查看crontab日志
+### 查看crontab日志
 >进入日志目录  cd  /var/log
 
 >只查看crontab相关日志文件  ls -l cron*
 
-## 时间设置技巧
-### 四月第一个周日执行任务
->30 19 1-7 4 *  test \`date +\%w` -eq 0 && [command]
+### 特殊技法
+四月第一个周日执行任务
 
-## 参考链接
-慕课网 crontab教程 ：http://www.imooc.com/learn/216 (很多内容在这里看的~~)
+```bash
+30 19 1-7 4 *  test \`date +\%w` -eq 0 && [command]
+```
+
+### 参考资料
+[慕课网 crontab教程](http://www.imooc.com/learn/216)

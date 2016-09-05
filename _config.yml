@@ -5,9 +5,9 @@
 # Site
 title: Jesse's life
 subtitle:
-description: 陈江松的博客
-author: Jesse Chen
-language: zh-Hans
+description:
+author: Jesse
+language: zh-cn
 timezone:
 
 # URL
@@ -63,20 +63,18 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+#theme: next
+theme: apollo
+
+archive_generator:
+    per_page: 0
+    yearly: false
+    monthly: false
+    daily: false
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: git@github.com:chenjiangsong/chenjiangsong.github.io.git
-  branch: master
-
-
-avatar: http://a1.qpic.cn/psb?/V12NDlRP3R6sAT/7iGZo7xknT45n6KVtZZubMcXeuRcSrcHjZU2TDB5HfU!/b/dHEBAAAAAAAA&bo=AAXAAwAFwAMFCSo!&rf=viewer_4
-
-duoshuo_shortname: jesseccchen
-
-search:
-  path: search.xml
-  field: post
+  #repo: git@github.com:chenjiangsong/chenjiangsong.github.io.git
+  #branch: master

@@ -1,16 +1,25 @@
-//- <div class="tag-cloud">
-//-   <div class="tag-cloud-title">
-//-       {{ _p('counter.tag_cloud', site.tags.length) }}
-//-   </div>
-//-   <div class="tag-cloud-tags">
-//-     {{ tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color: '#ccc', end_color: '#111'}) }}
-//-   </div>
-//- </div>
-
+//- .tag-cloud
+//-     .tag-cloud-title
+//-         - var len = site.tags.length
+//-         - var tags = hexo.locals.get('tags')
+//-         - console.log(tags);
+//-     .tag-cloud-tags 
+//-     != tagcloud({min_font: 14, max_font: 14, amount: 200, color: true, start_color: '#42b983', end_color: '#42b983'}) 
 .tag-cloud
-    .tag-cloud-title
-        - var len = site.tags.length
-               共有 #{ len } 个标签
-    .tag-cloud-tags
-        - var tagsList =  tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color: '#34495e', end_color: '#42b983'}); 
-        != tagsList
+    .tag-cloud-header
+        - site.tags.map(function(tag){
+            span.tag-cloud-item.js_tag(data-name= tag.name)
+                != tag.name
+        - })
+    .archive.js_tag_cloud_list
+        - site.tags.map(function(tag){
+            .one-tag.js_one_tag(data-name= tag.name)
+                h2.archive-year.tag-text!= tag.name
+                - tag.posts.map(function(post){
+                    .post-item
+                        .post-info
+                            != full_date(post.date, 'll')
+                        a.post-title-link(href= url_for(post.path))
+                            != post.title
+                - })
+        - })

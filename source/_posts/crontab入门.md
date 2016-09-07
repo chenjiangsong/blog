@@ -2,6 +2,7 @@
 title: crontab入门
 date: 2016-07-25 15:13:03
 tags: linux
+show: true
 ---
 
 ### crontab是啥

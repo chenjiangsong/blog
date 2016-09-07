@@ -1,8 +1,8 @@
 menu:
-    Blog: /
-    Archive: /archives/
-    Tag: /tags/
-    Weibo: http://weibo.com/jesseccchen
+    主页: /
+    归档: /archives/
+    标签: /tags/
+    微博: http://weibo.com/jesseccchen
     GitHub: https://github.com/chenjiangsong
 
 favicon: /batman_1.png

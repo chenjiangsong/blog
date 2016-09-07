@@ -1,12 +1,16 @@
-extends partial/layout
+//- <div class="tag-cloud">
+//-   <div class="tag-cloud-title">
+//-       {{ _p('counter.tag_cloud', site.tags.length) }}
+//-   </div>
+//-   <div class="tag-cloud-tags">
+//-     {{ tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color: '#ccc', end_color: '#111'}) }}
+//-   </div>
+//- </div>
 
-block container
-    include mixins/post
-    +tagsList()
-
-block pagination
-    include mixins/paginator
-    +home()
-
-block copyright
-    include partial/copyright
+.tag-cloud
+    .tag-cloud-title
+        - var len = site.tags.length
+               共有 #{ len } 个标签
+    .tag-cloud-tags
+        - var tagsList =  tagcloud({min_font: 12, max_font: 30, amount: 200, color: true, start_color: '#34495e', end_color: '#42b983'}); 
+        != tagsList

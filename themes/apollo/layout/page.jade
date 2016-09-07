@@ -1,9 +1,10 @@
 extends partial/layout
 
 block container
-    include mixins/post
-    +postList()
-
+    //- include mixins/post
+    if page.type === "tags"
+    include tags
+    
 block pagination
     include mixins/paginator
     +home()

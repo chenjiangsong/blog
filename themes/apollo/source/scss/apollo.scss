@@ -11,10 +11,28 @@
 @import "_partial/copyright";
 @import "_partial/tags-post-list";
 
+// @font-face {
+//     font-family: 'sourcesanspro';
+//     src: url(https://ob3wg7deo.bkt.clouddn.com/sourcesanspro.woff2) format('woff2'),
+//          url(https://ob3wg7deo.bkt.clouddn.com/sourcesanspro.woff) format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
 @font-face {
-    font-family: 'sourcesanspro';
-    src: url('/blog/font/sourcesanspro.woff2') format('woff2'),
-         url('/blog/font/sourcesanspro.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(https://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlNHq-FFgoDNV3GTKpHwuvtI.woff) format('woff');
 }
+// @font-face {
+//   font-family: 'sourcesanspro';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: local('Source Sans Pro'), local('SourceSansPro-Regular'), url(http://fonts.gstatic.com/s/sourcesanspro/v9/ODelI1aHBYDBqgeIAH2zlNHq-FFgoDNV3GTKpHwuvtI.woff) format('woff');
+// }
+// @font-face {
+//   font-family: 'Source Sans Pro';
+//   font-style: normal;
+//   font-weight: 600;
+//   src: local('Source Sans Pro Semibold'), local('SourceSansPro-Semibold'), url(http://fonts.gstatic.com/s/sourcesanspro/v9/toadOcfmlt9b38dHJxOBGCmgpmuQqK2I-L2S9cF65Ek.woff) format('woff');
+// }

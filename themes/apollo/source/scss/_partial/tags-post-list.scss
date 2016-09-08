@@ -1,11 +1,10 @@
 .tag-cloud{
-    padding: 20px 100px;
     .archive{
         margin: 2em auto;
     }
   .tag-cloud-header{
     text-align: center;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     .tag-cloud-item{
       display: inline-block;
       padding: 2px 10px;
@@ -13,7 +12,7 @@
       background-color: rgba(66, 185, 131, 0.8);
       font-size: 14px;
       border-radius: 4px;
-      margin-left: 10px;
+      margin: 10px 10px 0 0;
       cursor: pointer;
       &:hover{
         background-color: rgba(66, 185, 131, 1);

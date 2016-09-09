@@ -1,28 +1,30 @@
 ---
 title: centOs上安装php和nginx
 date: 2015-12-12 16:02:02
-tags: linux
+tags:
+- php
 ---
-
-## 安装编译环境
+半年前还在美的电商工作时记录下的教程，针对的是CentOs7和php5
+<!-- more -->
+### 安装编译环境
 ```bash
 yum install -y gcc gcc-c++ ncurses-devel perl
 ```
 
 ----
-## 安装pcre开发包（nginx依赖）
+### 安装pcre开发包（nginx依赖）
 ```bash
 yum install -y pcre-devel
 ```
 
 ----
-## 安装zlib
+### 安装zlib
 ```bash
 yum install -y zlib-devel
 ```
-<!-- more -->
 ----
-## 安装Nginx
+### 安装Nginx
+
 ```bash
 wget http://nginx.org/download/nginx-1.7.9.tar.gz
 
@@ -38,13 +40,13 @@ cd nginx-1.7.9
 
 ----
 
-## 启动nginx
+### 启动nginx
 ```bash
 /usr/local/nginx/sbin/nginx
 ```
 
 ----
-## 设置nginx开机启动
+### 设置nginx开机启动
 **写入文件**
 
 ```bash
@@ -61,13 +63,13 @@ chmod +x /etc/init.d/nginx
 chkconfig nginx on
 ```
 ----
-## 安装PHP依赖包
+### 安装PHP依赖包
 ```bash
 yum -y install autoconf libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel zlib zlib-devel glibc glibc-devel glib2 glib2-devel bzip2 bzip2-devel ncurses ncurses-devel curl curl-devel libmcrypt libmcrypt-devel mysql-devel
 ```
 
 ----
-## 生成libmysqlclient软链
+### 生成libmysqlclient软链
 ```bash
 ln -s /usr/lib64/mysql/libmysqlclient.so.18.0.0 /usr/lib/libmysqlclient.so
 ```
@@ -75,7 +77,7 @@ ln -s /usr/lib64/mysql/libmysqlclient.so.18.0.0 /usr/lib/libmysqlclient.so
 >**注意，这里的libmysqlclient.so.18.0.0可能更新而修改版本号（之前我参考的教程就是libmysqlclient.so.16.0.0），所以我们要先进入/usr/lib64/mysql/目录，确定这个文件（libmysqlclient.so.18.0.0）的具体名称，再生成软链。**
 
 ----
-## 安装libmcrypt
+### 安装libmcrypt
 >centos源不能安装libmcrypt-devel，由于版权的原因没有自带mcrypt的包。所以这里我们使用自己在网上下载的包，然后上传到服务器的目录上。
 
 ```bash
@@ -99,7 +101,7 @@ cd libmcrypt-2.5.8
 ```
 
 ----
-## 安装PHP
+### 安装PHP
 ```bash
 wget http://cn2.php.net/distributions/php-5.3.29.tar.gz
 ```
@@ -149,7 +151,7 @@ chmod 777 /usr/local/php/log
 ```
 
 ----
-## 修改php-fpm.conf文件
+### 修改php-fpm.conf文件
 
 ```bash
 vim /usr/local/php/etc/php-fpm.conf
@@ -157,7 +159,7 @@ vim /usr/local/php/etc/php-fpm.conf
 >设置错误日志路径 **error_log = /usr/local/php/log/php_errors.log**
 
 ----
-## 修改php.ini文件
+### 修改php.ini文件
 ```bash
 vim /usr/local/php/etc/php.ini
 ```
@@ -165,7 +167,7 @@ vim /usr/local/php/etc/php.ini
 >隐藏php版本号 **expose_php=Off**
 
 ----
-## 启动php-fpm
+### 启动php-fpm
 ```bash
 cd /usr/local/php-5.3.29
 ```
@@ -187,7 +189,7 @@ chkconfig php-fpm on
 ```
 
 ----
-## 配置一个虚拟主机
+### 配置一个虚拟主机
 ```bash
 mkdir /usr/local/nginx/conf/vhosts
 ```
@@ -198,7 +200,7 @@ vim /usr/local/nginx/conf/nginx.conf
 >去掉log_format main前的注释，在最后一个“}”前加入一行 **include vhosts/*.config;**
 
 ----
-## 检查一下配置文件是否有问题
+### 检查一下配置文件是否有问题
 ```bash
 /usr/local/nginx/sbin/nginx -t
 ```
@@ -207,7 +209,7 @@ vim /usr/local/nginx/conf/nginx.conf
 >nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
 
 ----
-## 重新加载配置文件
+### 重新加载配置文件
 ```bash
 /usr/local/nginx/sbin/nginx -s reload
 ```

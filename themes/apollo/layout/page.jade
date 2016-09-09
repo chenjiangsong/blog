@@ -2,7 +2,8 @@ extends partial/layout
 
 block container
     if page.type === "tags"
-    include tags
+        include tags
+    if page.type === "excerpts"
     
 block pagination
     include mixins/paginator

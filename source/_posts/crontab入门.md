@@ -2,16 +2,10 @@
 title: crontab入门
 date: 2016-07-25 15:13:03
 tags: linux
-show: true
 ---
 
-### crontab是啥
->linux的定时任务
-
-### 什么情况下使用，在哪使用
->需要定时执行的程序，如天气预报的爬虫程序。
-
->在SecurtCRT使用
+crontab是linux系统下的定时任务，可用于定时执行脚本，实现定时爬虫、任务等功能。
+本文简单介绍了命令行的crontab操作。
 
 <!-- more -->
 ### 简单的crontab命令：

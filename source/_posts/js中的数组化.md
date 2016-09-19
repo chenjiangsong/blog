@@ -1,6 +1,6 @@
 ---
 title: js中的数组化
-date: 2016-09-08 19:04:18
+date: 2015-12-08 19:04:18
 tags: javascript
 ---
 

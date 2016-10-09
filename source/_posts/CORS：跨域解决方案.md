@@ -21,8 +21,11 @@ xhr.send()
 ```
 
 服务端(node)
+
 ```js
 res.setHeader('Access-Control-Allow-Origin',req.header.origin);
 res.setHeader('Access-Control-Allow-Credentails',true);//告诉客户端可以在http请求中加上cookie
 res.setHeader('Access-Control-Allow-Method','POST,GET,PUT,DELETE,OPTIONS')
 ```
+
+

@@ -71,7 +71,7 @@ css
 ```
 
 效果图，完美！
-![](http://ob3wg7deo.bkt.clouddn.com/14760080771583.jpg)
+![](http://ob3wg7deo.bkt.clouddn.com/14760665741148.jpg)
 
 
 ## 注意点

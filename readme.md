@@ -6,6 +6,7 @@
 - [单行文字两端对齐：用css伪元素实现](https://github.com/chenjiangsong/blog/issues/4)
 - [HTTP和HTTPS的区别](https://github.com/chenjiangsong/blog/issues/5)
 - [vue源码--数据绑定视图](https://github.com/chenjiangsong/blog/issues/6)
+- [__proto__和prototype的关系和区别](https://github.com/chenjiangsong/blog/issues/7)
 ### 选择github blog的几个原因：
 1. 让自己的github内容更充实，首页的contributions图更好看
 2. 界面简洁，更容易让自己和读者注重blog的内容和质量，而不是主题的好看和花哨

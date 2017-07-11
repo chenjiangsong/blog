@@ -1,0 +1,19 @@
+{
+  "name": "new-blog",
+  "version": "1.0.0",
+  "description": "前端blog - [浏览器缓存机制小结](https://github.com/chenjiangsong/blog/issues/1) - [HTML5跟HTML4有什么不同？](https://github.com/chenjiangsong/blog/issues/3)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chenjiangsong/blog.git"
+  },
+  "author": "cjs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chenjiangsong/blog/issues"
+  },
+  "homepage": "https://github.com/chenjiangsong/blog#readme"
+}
